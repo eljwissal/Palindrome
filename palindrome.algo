@@ -1,0 +1,16 @@
+FUNCTION Palindrome(word : STRING) : BOOLEAN
+VAR
+	j,i : INTEGER ;
+	result : BOOLEAN ;
+BEGIN
+	j := word.length-1;
+	result := true;
+	FOR i  FROM 0 TO word.length-1
+		IF (word[i] = word[j]) THEN
+			j := j-1;
+		ELSE
+			result := false ;
+		END_IF
+	END_FOR
+	RETURN result ;
+END
